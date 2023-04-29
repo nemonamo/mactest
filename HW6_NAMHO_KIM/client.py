@@ -7,7 +7,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s1:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s2:
         s2.connect((HOST, 9001))
         while True:
-            server_choice = input("1번 서버와 2번 서버 중 어떤 서버에 연결하시겠습니까? (1 or 2)")
+            server_choice = input("1번 서버와 2번 서버 중 어떤 서버에 연결하시겠습니까? (1 or 2) quit를 입력하면 종료됩니다.")
 
             if server_choice == "1":
                 expression = "Request"

@@ -18,7 +18,6 @@ while True:
     except IndexError:
             continue
 
-
     if path == '/index.html':
         with open('index.html', 'rb') as f:
              response = f.read()
@@ -39,9 +38,6 @@ while True:
         content_type = 'text/plain'
         response_headers = 'HTTP/1.1 404 Not Found\nContent-Type: {}; charset=utf-8\n\n'.format(content_type).encode()
 
-
-
-    
     c.sendall(response_headers + response)
     c.close()
 
